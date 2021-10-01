@@ -12,25 +12,25 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 const Header = () => {
   return (
     <div className="header">
-      <div className="header-left">
+      <div className="header__left">
         <img src="https://pbs.twimg.com/profile_images/1328442491843059717/8i9075yw_400x400.jpg" alt="86 logo"/>
-        <div className="header-input">
+        <div className="header__input">
           <SearchIcon />
-          <input type="text" />
+          <input placeholder="Search 86'ed" type="text" />
         </div>
       </div>
-      <div className="header-middle">
-        <div className="header-option">
+      <div className="header__middle">
+        <div className="header__option header__option--active">
           <HomeIcon fontSize="large" />
         </div>
-        <div className="header-option">
+        <div className="header__option">
           <LocalBarIcon fontSize="large" />
         </div>
       </div>
-      <div className="header-right">
-        <div className="header-info">
+      <div className="header__right">
+        <div className="header__info">
           <Avatar />
-          <h4>Adrian Camacho</h4>
+          <h4>Chonnessey</h4>
         </div>
 
         <IconButton>
