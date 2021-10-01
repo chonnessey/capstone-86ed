@@ -5,9 +5,9 @@ import SidebarRow from './SidebarRow'
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <SidebarRow />
-      <SidebarRow />
-      <SidebarRow />
+      <SidebarRow title="Friends" />
+      <SidebarRow title="Dee Ems" />
+      <SidebarRow title="Community" />
     </div>
   )
 }

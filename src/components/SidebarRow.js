@@ -1,10 +1,10 @@
 import React from 'react'
 import '../assets/SidebarRow.css'
 
-const SidebarRow = () => {
+const SidebarRow = ({ src, Icon, title }) => {
   return (
     <div className="sidebarRow">
-      <p>I am a row</p>
+      <p>{title}</p>
     </div>
   )
 }
