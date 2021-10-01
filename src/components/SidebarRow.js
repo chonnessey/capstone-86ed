@@ -1,5 +1,5 @@
 import React from 'react'
-import './SidebarRow.css'
+import '../assets/SidebarRow.css'
 
 const SidebarRow = () => {
   return (
