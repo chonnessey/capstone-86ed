@@ -9,6 +9,9 @@ const MessageSender = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    // firebase stuff
+
+    setInput('')
   }
   return (
     <div className="messageSender">
