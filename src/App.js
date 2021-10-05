@@ -3,13 +3,14 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar'
 import Feed from './components/Feed'
 import Widgets from './components/Widgets'
+import Login from './components/Login'
 
 function App() {
-  const user = null
+  const user = 'null'
   return (
     <div className="app">
       {!user ? (
-      <h1>Login</h1>
+      <Login />
   ) : (
       <>
         <Header />
