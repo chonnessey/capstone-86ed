@@ -29,7 +29,7 @@ const MessageSender = () => {
 
         <div className="messageSender__option">
           <InsertEmoticon style={{color: 'orange'}} />
-          <h3>Photo/Video</h3>
+          <h3>Mood</h3>
         </div>
       </div>
     </div>
