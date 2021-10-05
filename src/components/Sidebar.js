@@ -9,7 +9,7 @@ import DirtyLensIcon from '@mui/icons-material/DirtyLens';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <SidebarRow src={userEvent.photoURL} title={userEvent.displayName} />
+      <SidebarRow src={userEvent.photoURL} title={'Chonnessey'} />
       <SidebarRow Icon={PeopleIcon} title='Friends' />
       <SidebarRow Icon={ChatIcon} title='Dee Emz' />
       <SidebarRow Icon={DirtyLensIcon} title='Wall Of Shame' />
