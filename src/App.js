@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar'
 import Feed from './components/Feed'
 import Widgets from './components/Widgets'
 import Login from './components/Login'
+import Signup from './components/Signup'
 
 function App() {
   const user = 'null'
@@ -19,6 +20,7 @@ function App() {
           <Sidebar />
           <Feed />
           <Widgets />
+          <Signup />
         </div>
       </>
   )}
