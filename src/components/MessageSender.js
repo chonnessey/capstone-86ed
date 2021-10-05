@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Avatar } from '@mui/material'
 import '../assets/MessageSender.css'
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary'
 import InsertEmoticon  from '@mui/icons-material/InsertEmoticon'
 
 const MessageSender = () => {
+  const [input, setInput] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -13,7 +15,10 @@ const MessageSender = () => {
       <div className="messageSender__top">
         {/* <Avatar /> */}
         <form>
+          <Avatar />
           <input 
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             type="text" 
             placeholder="Insert rant here"
             className="messageSender__input" />
