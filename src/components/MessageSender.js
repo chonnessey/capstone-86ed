@@ -1,6 +1,7 @@
 import React from 'react'
 import '../assets/MessageSender.css'
-import VideocamIcon from '@mui/icons-material/Videocam'
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary'
+import InsertEmoticon  from '@mui/icons-material/InsertEmoticon'
 
 const MessageSender = () => {
 
@@ -22,7 +23,13 @@ const MessageSender = () => {
 
       <div className="messageSender__bottom">
         <div className="messageSender__option">
-          <VideocamIcon style={{color: 'red'}} />
+          <PhotoLibraryIcon style={{color: 'green'}} />
+          <h3>Photo/Video</h3>
+        </div>
+
+        <div className="messageSender__option">
+          <InsertEmoticon style={{color: 'orange'}} />
+          <h3>Photo/Video</h3>
         </div>
       </div>
     </div>

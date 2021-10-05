@@ -5,7 +5,7 @@ import Feed from './components/Feed'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
 
       <div className="app__body">
