@@ -1,6 +1,8 @@
 import React from 'react'
 import '../assets/Post.css'
 import { Avatar } from '@mui/material'
+import PlusOneIcon from '@mui/icons-material/PlusOne';
+import CommentIcon from '@mui/icons-material/Comment';
 
 const Post = ({ profilePic, image, username, timestamp, message }) => {
   return (
@@ -20,6 +22,18 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
 
       <div className="post__image">
         <img src={image} alt="" />
+      </div>
+
+      <div className="post__options">
+        <div className="post__option">
+          <PlusOneIcon />
+          <p>Cheers</p>
+        </div>
+
+        <div className="post__option">
+          <CommentIcon/>
+          <p>Can I call</p>
+        </div>
       </div>
     </div>
   )
