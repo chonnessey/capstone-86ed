@@ -3,6 +3,7 @@ import { Grid, Paper, Button, Avatar, Typography, TextField, Alert } from '@mui/
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import '../assets/Signup.css'
 import { useAuth } from '../contexts/AuthContext'
+import { Link, useHistory } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -13,6 +14,7 @@ const Signup = () => {
   const { signup } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -25,7 +27,9 @@ const Signup = () => {
       setError('')
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-    } catch {
+      history.push('/')
+    } catch(error) {
+      console.log(error)
       setError('Failed to create an account')
     }
 
@@ -58,7 +62,7 @@ const Signup = () => {
           <TextField ref={passwordConfirmationRef} required type="password" fullWidth label='Confirm Password' />
           <Button style={buttonStyle} disabled={loading} className="form__button" type="submit" variant="contained">Sign Up</Button>
         </form>
-        <div style={linkStyle}>Already have an account? Log In</div>
+        <div style={linkStyle}>Already have an account? <Link to='/login'>Log In</Link></div>
         </Paper>
       </Grid>
     </>

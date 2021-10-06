@@ -1,15 +1,17 @@
 import React, { useRef, useState } from 'react'
 import { Grid, Paper, Button, Avatar, Typography, TextField, Alert } from '@mui/material'
-import AddBoxIcon from '@mui/icons-material/AddBox';
+import LoginIcon from '@mui/icons-material/Login';
 import { useAuth } from '../contexts/AuthContext'
+import { Link, useHistory } from 'react-router-dom'
 
 const Login = () => {
 
   const emailRef = useRef()
   const passwordRef = useRef()
-  const { signup } = useAuth()
+  const { login } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -17,9 +19,10 @@ const Login = () => {
     try {
       setError('')
       setLoading(true)
-      await signup(emailRef.current.value, passwordRef.current.value)
+      await login(emailRef.current.value, passwordRef.current.value)
+      history.push('/')
     } catch {
-      setError('Failed to create an account')
+      setError('Failed to sign in')
     }
 
     setLoading(false)
@@ -28,13 +31,15 @@ const Login = () => {
   const paperStyle={padding: '30px 20px', width: 300, margin: '20px auto'}
   const headerStyle={margin: 0}
   const avatarStyle={backgroundColor: '#1bbd7e'}
+  const buttonStyle={width: '100%', marginTop: '10px'}
+  const linkStyle={marginTop: '10px', textAlign: 'center'}
 
   return (
     <Grid>
       <Paper elevation={20} style={paperStyle}>
         <Grid align='center'>
           <Avatar style={avatarStyle}>
-            <AddBoxIcon />
+            <LoginIcon />
           </Avatar>
 
         <h2 style={headerStyle}>Log In</h2>
@@ -44,8 +49,9 @@ const Login = () => {
       <form onSubmit={handleSubmit} className="signup__form">
         <TextField ref={emailRef} required type="email" fullWidth label='Email' />
         <TextField ref={passwordRef} required type="password" fullWidth label='Password' />
-        <Button disabled={loading} className="form__button" type="submit" variant="contained">Log In</Button>
+        <Button style={buttonStyle} disabled={loading} className="form__button" type="submit" variant="contained">Log In</Button>
       </form>
+      <div style={linkStyle}>Need an Account? <Link to='/signup'>Sign Up</Link></div>
       </Paper>
     </Grid>
   )
