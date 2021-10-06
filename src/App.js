@@ -6,6 +6,7 @@ import Widgets from './components/Widgets'
 // import Login from './components/Login'
 import Signup from './components/Signup'
 import { AuthProvider } from '../src/contexts/AuthContext'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (

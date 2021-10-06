@@ -10,7 +10,7 @@ const Signup = () => {
   const userNameRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmationRef = useRef()
-  const { signup, currentUser } = useAuth()
+  const { signup } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -24,7 +24,7 @@ const Signup = () => {
     try {
       setError('')
       setLoading(true)
-      await signup(emailRef.current.value, userNameRef.current.value, passwordRef.current.value)
+      await signup(emailRef.current.value, passwordRef.current.value)
     } catch {
       setError('Failed to create an account')
     }
@@ -45,9 +45,8 @@ const Signup = () => {
           </Avatar>
 
         <h2 style={headerStyle}>Sign Up</h2>
-        {currentUser.username}
         {error && <Alert variant="danger">{error}</Alert>}
-        <Typography variant='caption' gutterBottom={5}>Fill out the form to create an account.</Typography>
+        <Typography variant='caption'>Fill out the form to create an account.</Typography>
         </Grid>
       <form onSubmit={handleSubmit} className="signup__form">
         <TextField ref={emailRef} required type="email" fullWidth label='Email' />

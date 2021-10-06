@@ -6,12 +6,12 @@ const Widgets = () => {
     <div className="widgets">
       <iframe 
         src="https://poachedjobs.com/jobs/all/portland+or" 
-        frameborder="0"
+        frameBorder="0"
         width='340'
         height='100%'
         style={{border: 'none', overflow: 'hidden'}}
         scrolling='no'
-        allowTransparency='true'
+        allowtransparency='true'
         allow='encrypted-media'
         title='poached iframe'></iframe>
     </div>
