@@ -10,7 +10,7 @@ const Signup = () => {
   const userNameRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmationRef = useRef()
-  const { signup } = useAuth()
+  const { signup, currentUser } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -24,7 +24,7 @@ const Signup = () => {
     try {
       setError('')
       setLoading(true)
-      await signup(emailRef.current.value, passwordRef.current.value)
+      await signup(emailRef.current.value, userNameRef.current.value, passwordRef.current.value)
     } catch {
       setError('Failed to create an account')
     }
@@ -35,7 +35,7 @@ const Signup = () => {
   const paperStyle={padding: '30px 20px', width: 300, margin: '20px auto'}
   const headerStyle={margin: 0}
   const avatarStyle={backgroundColor: '#1bbd7e'}
-  
+
   return (
     <Grid>
       <Paper elevation={20} style={paperStyle}>
@@ -45,6 +45,7 @@ const Signup = () => {
           </Avatar>
 
         <h2 style={headerStyle}>Sign Up</h2>
+        {currentUser.username}
         {error && <Alert variant="danger">{error}</Alert>}
         <Typography variant='caption' gutterBottom={5}>Fill out the form to create an account.</Typography>
         </Grid>
