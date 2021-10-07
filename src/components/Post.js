@@ -5,7 +5,7 @@ import PlusOneIcon from '@mui/icons-material/PlusOne';
 import CommentIcon from '@mui/icons-material/Comment';
 
 const Post = ({ post, profilePic, image, username, timestamp, message }) => {
-  
+
   const [like, setLike] = useState(23)
   const [isLiked, setIsLiked] = useState(false)
 
@@ -20,7 +20,7 @@ const Post = ({ post, profilePic, image, username, timestamp, message }) => {
         <Avatar src={profilePic} className="post__avatar" />
         <div className="post__topInfo">
           <h3>{username}</h3>
-          <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
+          {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
         </div>
       </div>
 

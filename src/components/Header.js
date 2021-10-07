@@ -17,7 +17,7 @@ const Header = () => {
         <img src="https://pbs.twimg.com/profile_images/1328442491843059717/8i9075yw_400x400.jpg" alt="86 logo"/>
         <div className="header__input">
           <SearchIcon />
-          <input placeholder="Search 86'ed" type="text" />
+          <input placeholder="Search EightySixed" type="text" />
         </div>
       </div>
       <div className="header__middle">

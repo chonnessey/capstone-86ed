@@ -4,17 +4,22 @@ import '../assets/MessageSender.css'
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary'
 import InsertEmoticon  from '@mui/icons-material/InsertEmoticon'
 import db from '../firebase'
-// import firebase from 'firebase/compat/app'
+import firebase from 'firebase/compat/app'
 import { addDoc, collection } from 'firebase/firestore'
 
 const MessageSender = () => {
   const [input, setInput] = useState('')
+  const [imageUrl, setImageUrl] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const collectionRef = collection(db, 'posts')
     const payload = {
-      message: input
+      message: input,
+      image: imageUrl,
+      profilePic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkJGWKfQ415U4u44_CpDIIJg_qo9cJXQp1A&usqp=CAU',
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      username: 'chonnessey'
     }
     await addDoc(collectionRef, payload)
     // db.collection('posts').add({
@@ -25,6 +30,7 @@ const MessageSender = () => {
     // })
 
     setInput('')
+    setImageUrl('')
   }
   return (
     <div className="messageSender">
@@ -38,6 +44,11 @@ const MessageSender = () => {
             type="text" 
             placeholder="Insert rant here"
             className="messageSender__input" />
+          <input 
+            onChange={(e) => setImageUrl(e.target.value)}
+            type="text"
+            value={imageUrl}
+            placeholder="Image URL (optional)" />
           <button onClick={handleSubmit} type="submit">Hidden submit</button>
         </form>
       </div>
