@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../assets/Post.css'
 import { Avatar } from '@mui/material'
 import PlusOneIcon from '@mui/icons-material/PlusOne';
 import CommentIcon from '@mui/icons-material/Comment';
 
-const Post = ({ profilePic, image, username, timestamp, message }) => {
+const Post = ({ post, profilePic, image, username, timestamp, message }) => {
+  
+  const [like, setLike] = useState(23)
+  const [isLiked, setIsLiked] = useState(false)
+
+  const likeHandler = () => {
+    setLike(isLiked ? like - 1 : like + 1)
+    setIsLiked(!isLiked)
+  }
+
   return (
     <div className="post">
       <div className="post__top">
@@ -26,8 +35,8 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
 
       <div className="post__options">
         <div className="post__option">
-          <PlusOneIcon />
-          <p>Like</p>
+          <PlusOneIcon onClick={likeHandler} />
+          <p>{like}</p>
         </div>
 
         <div className="post__option">
