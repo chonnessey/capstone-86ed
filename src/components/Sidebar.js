@@ -30,7 +30,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <SidebarRow src={userEvent.photoURL} title={'Chonnessey'} />
       <SidebarRow Icon={PeopleIcon} title='Friends' />
-      <SidebarRow Icon={ChatIcon} title='Dee Emz' />
+      <SidebarRow Icon={ChatIcon} title='Messages' />
       <SidebarRow Icon={DirtyLensIcon} title='Wall Of Shame' />
       <SidebarRow onClick={handleLogout} Icon={LogoutIcon} title='Log Out' />
     </div>
