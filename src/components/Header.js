@@ -22,7 +22,7 @@ const Header = () => {
       </div>
       <div className="header__middle">
         <div className="header__option header__option--active">
-          <Link to='/'><HomeIcon fontSize="large" /></Link>
+          <Link to='/' style={{textDecoration: 'none', color: 'black'}}><HomeIcon fontSize="large" /></Link>
         </div>
         <div className="header__option">
           <LocalBarIcon fontSize="large" />

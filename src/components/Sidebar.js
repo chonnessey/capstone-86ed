@@ -7,7 +7,7 @@ import ChatIcon from '@mui/icons-material/Chat'
 import DirtyLensIcon from '@mui/icons-material/DirtyLens';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useAuth } from '../contexts/AuthContext'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const Sidebar = () => {
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <SidebarRow src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkJGWKfQ415U4u44_CpDIIJg_qo9cJXQp1A&usqp=CAU' title={'chonnessey'} />
+      <Link to='/profile' style={{textDecoration: 'none', color: 'black'}}><SidebarRow src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkJGWKfQ415U4u44_CpDIIJg_qo9cJXQp1A&usqp=CAU' title={'chonnessey'} /></Link>
       <SidebarRow Icon={PeopleIcon} title='Friends' />
       <SidebarRow Icon={ChatIcon} title='Messages' />
       <SidebarRow Icon={DirtyLensIcon} title='Wall Of Shame' />
