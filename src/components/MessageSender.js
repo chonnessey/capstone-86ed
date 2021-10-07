@@ -31,7 +31,7 @@ const MessageSender = () => {
       <div className="messageSender__top">
         {/* <Avatar /> */}
         <form>
-          <Avatar />
+          <Avatar src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkJGWKfQ415U4u44_CpDIIJg_qo9cJXQp1A&usqp=CAU'/>
           <input 
             value={input}
             onChange={(e) => setInput(e.target.value)}

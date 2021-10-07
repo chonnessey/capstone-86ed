@@ -27,12 +27,12 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
       <div className="post__options">
         <div className="post__option">
           <PlusOneIcon />
-          <p>Cheers</p>
+          <p>Like</p>
         </div>
 
         <div className="post__option">
           <CommentIcon/>
-          <p>Can I call</p>
+          <p>Comment</p>
         </div>
       </div>
     </div>

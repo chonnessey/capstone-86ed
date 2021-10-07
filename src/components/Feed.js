@@ -27,7 +27,7 @@ const Feed = () => {
           image={post.data.image} />
       ))}
       {/* <Post 
-        // key={id}
+        
         profilePic="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkJGWKfQ415U4u44_CpDIIJg_qo9cJXQp1A&usqp=CAU"
         message='Que ondas mijo!?!'
         timestamp='October 5, 2021'

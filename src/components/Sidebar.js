@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <SidebarRow src={userEvent.photoURL} title={'Chonnessey'} />
+      <SidebarRow src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkJGWKfQ415U4u44_CpDIIJg_qo9cJXQp1A&usqp=CAU' title={'chonnessey'} />
       <SidebarRow Icon={PeopleIcon} title='Friends' />
       <SidebarRow Icon={ChatIcon} title='Messages' />
       <SidebarRow Icon={DirtyLensIcon} title='Wall Of Shame' />
