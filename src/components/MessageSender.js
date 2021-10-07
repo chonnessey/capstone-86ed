@@ -3,13 +3,26 @@ import { Avatar } from '@mui/material'
 import '../assets/MessageSender.css'
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary'
 import InsertEmoticon  from '@mui/icons-material/InsertEmoticon'
+import db from '../firebase'
+// import firebase from 'firebase/compat/app'
+import { addDoc, collection } from 'firebase/firestore'
 
 const MessageSender = () => {
   const [input, setInput] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // firebase stuff
+    const collectionRef = collection(db, 'posts')
+    const payload = {
+      message: input
+    }
+    await addDoc(collectionRef, payload)
+    // db.collection('posts').add({
+    //   message: input,
+    //   // timestamp: firebase.firestore.FieldValue.sereverTimeStamp()
+    //   // username: user.displayName,
+    //   // image: imageUrl
+    // })
 
     setInput('')
   }
