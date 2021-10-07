@@ -1,5 +1,7 @@
+import { AttributionSharp } from '@mui/icons-material'
 import React, { useContext, useState, useEffect } from 'react'
 import { auth } from '../firebase'
+// import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const AuthContext = React.createContext()
 
@@ -21,6 +23,10 @@ export const AuthProvider = ({ children }) => {
     return auth.signInWithEmailAndPassword(email, password)
   }
 
+  const logout = () => {
+    return auth.signOut()
+  }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       setCurrentUser(user)
@@ -34,7 +40,8 @@ export const AuthProvider = ({ children }) => {
   const value = {
     currentUser,
     signup,
-    login
+    login,
+    logout
   }
 
   return (

@@ -8,6 +8,7 @@ import Signup from './components/Signup'
 import { AuthProvider } from '../src/contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import DashBoard from './components/DashBoard'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   return (
