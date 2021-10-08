@@ -1,49 +1,35 @@
 # Eighty Sixed
-## By Adrian Camacho
+## By Adrian Camacho :electric_plug:
 
 ---
 
-### Project Description
+### Project Description :pencil:
 
-This project is a web application that DESCRIPTION
+This project is a social media platform directed towards people in the service industry. 
 ---
-### Tech Stack
+### Tech Stack :floppy_disk:
 1. HTML5+CSS3
 2. JavaScript/ES2018+
 3. React
 4. Material UI
-5. webpack/webpack-cli/webpack dev server
-6. eslint
-7. babel transpiler
-8. Jest testing
+5. Firebase v9
+6. Firestore v9
 ---
-
-### Project Build Available At:
-
-[BUILD URL](BUILD URL)
-
----
-### Installation Instructions
-1. Clone this repo: `git clone https://github.com/Usarneme/REPO URL`
-2. Enter new directory `cd REPO DIR`
+### Installation Instructions :pushpin:
+1. Clone this repo: `git clone https://github.com/chonnessey/capstone-86ed.git`
+2. Enter new directory `cd capstone-86ed`
 3. Install dependencies with `npm install`
-4. To run it locally, use the npm dev command `npm run start:dev`
-5. Open your web browser and navigate to http://localhost:9001
-6. For a production build, use `npm run build`
+4. To run it locally, use the npm dev command `npm start`
+5. Open your web browser and navigate to http://localhost:3000
+6. You can sign up for an account by navigating to http://localhost:3000/signup
 ---
-### Known Issues:
-1. NO KNOWN ISSUES
-2. Please open a pull request if you have any issues!
+### Known Bugs: :bug:
+1. This project is still a work in progess. The biggest issue right now is autentication. You can sign up for an account but it doesn't save any of the information into the firestore database. 
 ---
-### Test Suite/Specification
+### Contact Info :inbox_tray:
 
-> See also [the Jest Test File](TESTSURL) for Jest Test Suite which includes 14 passing tests. View Test Results from Project Directory by Running `yarn run test` or if you prefer npm `npm run test`
-
-```
-Describe: TESTS
-
-```
----
+You can reach me at: <adriancamacho18@gmail.com> :rocket:
+___
 ### License is GPLv3 and I make no claim to copyright. 
 <br />
 
