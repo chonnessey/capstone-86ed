@@ -1,12 +1,13 @@
-# Eighty Sixed
+# EightySixed :eight::six:
 ## By Adrian Camacho :electric_plug:
 
 ---
+![I am GitHub Readme Generator's creator](src/assets/86screenshot.png)
 
 ### Project Description :pencil:
 
-This project is a social media platform directed towards people in the service industry. 
----
+This project is a social media platform directed towards people in the service industry. This project is a work in progress but once it's done it will be like other social media platforms.
+___
 ### Tech Stack :floppy_disk:
 1. HTML5+CSS3
 2. JavaScript/ES2018+
