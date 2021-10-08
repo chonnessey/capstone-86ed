@@ -1,4 +1,4 @@
-# EightySixed :eight::six:
+# EightySixed :no_entry_sign:
 ## By Adrian Camacho :electric_plug:
 
 ---
@@ -6,7 +6,7 @@
 
 ### Project Description :pencil:
 
-This project is a social media platform directed towards people in the service industry. This project is a work in progress but once it's done it will be like other social media platforms.
+This project is a social media platform directed towards people in the service industry. The idea was to have a platform where service industry workers can post about people who have been banned(eighty-sixed) from their place of work. On top of that it can just be a place where like minded people can create an online community and connect with each other! This project is a work in progress :soon: .
 ___
 ### Tech Stack :floppy_disk:
 1. HTML5+CSS3
